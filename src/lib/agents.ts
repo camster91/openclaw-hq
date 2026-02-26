@@ -3,6 +3,7 @@ export const AGENTS = {
   bernard: { id: 'bernard', name: 'Bernard', emoji: '🔨', role: 'Developer', model: 'deepseek-reasoner', color: '#f59e0b', bg: '#fffbeb' },
   vale: { id: 'vale', name: 'Vale', emoji: '📣', role: 'Marketer', model: 'deepseek-chat', color: '#8b5cf6', bg: '#f5f3ff' },
   gumbo: { id: 'gumbo', name: 'Gumbo', emoji: '🎯', role: 'Assistant', model: 'deepseek-chat', color: '#06b6d4', bg: '#ecfeff' },
+  stitch: { id: 'stitch', name: 'Stitch', emoji: '🎨', role: 'Web Designer', model: 'deepseek-reasoner', color: '#ec4899', bg: '#fdf2f8' },
   unassigned: { id: 'unassigned', name: 'Unassigned', emoji: '❓', role: '', model: '', color: '#6b7280', bg: '#f9fafb' },
 } as const;
 
