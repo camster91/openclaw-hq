@@ -1,7 +1,14 @@
 import Database from 'better-sqlite3';
 import path from 'path';
+import fs from 'fs';
 
-const DB_PATH = path.join(process.cwd(), 'openclaw-hq.db');
+// In production Docker, use /app/data for writable SQLite storage
+// In development, use the project root
+const dataDir = process.env.DB_DIR || process.cwd();
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+const DB_PATH = path.join(dataDir, 'openclaw-hq.db');
 
 let db: Database.Database;
 
